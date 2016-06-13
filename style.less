@@ -1,0 +1,117 @@
+.markdown-preview.markdown-preview {
+  @c_border: #666; // border-color
+  max-width: 900px;
+  margin: 0 auto;
+  // padding: 25px;
+  // color: white;
+  font-family: sans-serif;
+
+  // hr {
+  //   margin: 50px 0;
+  //   background-color: transparent;
+  //   &:after{
+  //     content: "";
+  //     display: block;
+  //     border-top-style: ridge;
+  //   }
+  //   &.pb {
+  //     // <hr class="pb">を入れる事で、
+  //     // プリント時の改ページを指定することができる。
+  //     page-break-after: always;
+  //     &:after {
+  //       display: none;
+  //     }
+  //   }
+  // }
+  h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    padding: 0 0 0;
+    // border-color: @c_border;
+  }
+  h1 {
+    font-size: 34px;
+    // border: none;
+    margin: 0 0 0;
+    text-align: center;
+    opacity: 0.54;
+    // letter-spacing: 5px
+  }
+  h2 {
+    font-size: 24px;
+    border: none;
+    line-height: 30px;
+    opacity: 0.87;
+    margin: 24px 0 0;
+    // letter-spacing: 3px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+    opacity: 0.54;
+    margin: 0 0 0;
+    // font-weight: bold;
+  }
+  h4 {
+    font-size: 21px;
+    // font-weight: bold;
+    margin: 0 0 0;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  h3 + ul {
+    margin: 0 0 5px;
+  }
+  p, table, ul, ol, dl, pre, blockquote {
+    font-size: 16px;
+    line-height: 26px;
+    opacity: 0.87;
+    font-weight: normal;
+    padding-left: 20px;
+    margin: 0 0 0;
+    ul, li, ol, dl {
+      list-style-type: none;
+    }
+    li::before, ol::before, dl::before {
+      display: inline-flex;
+      display: -webkit-inline-flex;
+      width: 14px;
+      content: "-";
+    }
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 800px;
+    th {
+      text-align: center;
+      background-color: #eee;
+      border-color: @c_border;
+    }
+    tr {
+      border-top: #666;
+    }
+    td {
+      border-color: @c_border;
+    }
+  }
+  .margin-clear {
+    margin-left: 0;
+  }
+  // テキストの中央揃え
+  .center {
+    text-align: center;
+    &:extend(.margin-clear);
+  }
+  // テキストの右寄せ
+  .right {
+    text-align: right;
+    &:extend(.margin-clear);
+  }
+}
